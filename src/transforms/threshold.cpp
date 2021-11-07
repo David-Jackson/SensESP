@@ -27,7 +27,7 @@ static const char NUMERIC_SCHEMA[] PROGMEM = R"({
   })";
 
 bool NumericThreshold::set_configuration(const JsonObject& config) {
-  String expected[] = {"min", "max", "in_range", "value"};
+  String expected[] = {"min", "max", "in_range"};
   for (auto str : expected) {
     if (!config.containsKey(str)) {
       return false;
